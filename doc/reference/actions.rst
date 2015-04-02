@@ -180,6 +180,22 @@ In-database records are significantly richer and can perform a number of
 specific or generic actions based on their ``state``. Some fields (and
 corresponding behaviors) are shared between states:
 
+Server Actions (``ir.actions.server``)
+======================================
+
+Allow triggering complex server code from any valid action location. Only
+two fields are relevant to clients:
+
+``id``
+    the in-database identifier of the server action to run
+``context`` (optional)
+    context data to use when running the server action
+
+In-database records are significantly richer and can perform a number of
+specific or generic actions based on their ``state``. Some fields (and
+corresponding behaviors) are shared between states:
+
+
 ``model_id``
     Odoo model linked to the action, made available in
     :ref:`evaluation contexts <reference/actions/server/context>`
